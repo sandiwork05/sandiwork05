@@ -5,7 +5,7 @@
 <!-- Enhanced Animated SVG Header -->
 <svg width="100%" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg" style="background: linear-gradient(135deg, #000 0%, #1a1a1a 100%); border-radius: 15px; margin-bottom: 30px;">
   <defs>
-    <style>
+    <style type="text/css"><![CDATA[
       @keyframes float {
         0%, 100% { transform: translateY(0px); }
         50% { transform: translateY(-20px); }
@@ -42,7 +42,7 @@
       .star {
         animation: starTwinkle 3s infinite;
       }
-    </style>
+    ]]></style>
     <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#ff73c3;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#ff1493;stop-opacity:1" />
