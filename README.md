@@ -2,7 +2,7 @@
 
 <div align="center">
   
-<!-- Animated SVG Header -->
+<!-- Enhanced Animated SVG Header -->
 <svg width="100%" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg" style="background: linear-gradient(135deg, #000 0%, #1a1a1a 100%); border-radius: 15px; margin-bottom: 30px;">
   <defs>
     <style>
@@ -22,6 +22,10 @@
         0%, 100% { stop-color: #ff73c3; }
         50% { stop-color: #ff1493; }
       }
+      @keyframes starTwinkle {
+        0%, 100% { opacity: 0.8; }
+        50% { opacity: 0.2; }
+      }
       .header-text { 
         font-family: 'Montserrat', sans-serif; 
         font-weight: bold;
@@ -35,6 +39,9 @@
         animation: rotate 20s linear infinite;
         transform-origin: center;
       }
+      .star {
+        animation: starTwinkle 3s infinite;
+      }
     </style>
     <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#ff73c3;stop-opacity:1" />
@@ -45,6 +52,12 @@
   <!-- Rotating Circle Background Elements -->
   <circle class="rotating" cx="100" cy="150" r="60" fill="none" stroke="#ff73c3" stroke-width="2" opacity="0.3"/>
   <circle class="rotating" cx="1100" cy="150" r="60" fill="none" stroke="#ff73c3" stroke-width="2" opacity="0.3" style="animation-direction: reverse;"/>
+  
+  <!-- Twinkling Stars -->
+  <circle class="star" cx="200" cy="50" r="3" fill="#ff73c3"/>
+  <circle class="star" cx="400" cy="100" r="2" fill="#ff1493"/>
+  <circle class="star" cx="800" cy="200" r="4" fill="#ff73c3"/>
+  <circle class="star" cx="1000" cy="80" r="3" fill="#ff1493"/>
   
   <!-- Main Text -->
   <text class="header-text" x="600" y="80" font-size="72" text-anchor="middle" fill="#fff" letter-spacing="3">
@@ -117,16 +130,36 @@ Senior UI/UX Developer & Full Stack Architect specializing in enterprise-scale a
 ## 🛠️ **Technical Expertise**
 
 ### **Frontend Technologies**
-```
-┌─────────────────────────────────────────────────────────────┐
-│  React.js ████████████████████░░░░  95%  │  95+ React Projects
-│  Angular (2-16) ████████████████████░░░░  95%  │  Enterprise Specs
-│  TypeScript ████████████████░░░░░░  90%  │  Strict Type Safety
-│  JavaScript (ES6+) ████████████████████░░░░  95%  │  Modern Patterns
-│  HTML5/CSS3/SCSS ██████████████████████░░  98%  │  Pixel Perfect
-│  React Native ████████████████░░░░░░  85%  │  iOS/Android
-└─────────────────────────────────────────────────────────────┘
-```
+<div align="center">
+
+<svg width="100%" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bar {
+        fill: #ff73c3;
+        animation: growBar 2s ease-in-out;
+      }
+      @keyframes growBar {
+        from { width: 0; }
+        to { width: 100%; }
+      }
+    </style>
+  </defs>
+  <rect x="10" y="10" width="95%" height="20" class="bar"/>
+  <text x="10" y="25" fill="#fff" font-size="14">React.js - 95%</text>
+  <rect x="10" y="40" width="95%" height="20" class="bar"/>
+  <text x="10" y="55" fill="#fff" font-size="14">Angular (2-16) - 95%</text>
+  <rect x="10" y="70" width="90%" height="20" class="bar"/>
+  <text x="10" y="85" fill="#fff" font-size="14">TypeScript - 90%</text>
+  <rect x="10" y="100" width="95%" height="20" class="bar"/>
+  <text x="10" y="115" fill="#fff" font-size="14">JavaScript (ES6+) - 95%</text>
+  <rect x="10" y="130" width="98%" height="20" class="bar"/>
+  <text x="10" y="145" fill="#fff" font-size="14">HTML5/CSS3/SCSS - 98%</text>
+</svg>
+
+</div>
+
+---
 
 ### **State Management & Backend**
 ```
@@ -315,6 +348,21 @@ const myApproach = {
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/sandiwork05)
 [![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:Sandiwork04@gmail.com)
 [![Phone](https://img.shields.io/badge/Phone-408--375--9753-ff73c3?style=flat-square&logo=whatsapp&logoColor=white)](tel:+14083759753)
+
+<!-- Add a bouncing arrow animation -->
+<svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .arrow {
+      fill: #ff73c3;
+      animation: bounce 1s infinite;
+    }
+  </style>
+  <polygon class="arrow" points="25,5 35,20 15,20"/>
+</svg>
 
 </div>
 
