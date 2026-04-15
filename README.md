@@ -2,47 +2,9 @@
 
 <div align="center">
   
-<!-- Enhanced Animated SVG Header -->
-<svg width="100%" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg" style="background: linear-gradient(135deg, #000 0%, #1a1a1a 100%); border-radius: 15px; margin-bottom: 30px;">
+<!-- Enhanced Animated SVG Header with Native SVG Animations -->
+<svg width="100%" height="320" viewBox="0 0 1200 320" xmlns="http://www.w3.org/2000/svg" style="background: linear-gradient(135deg, #000 0%, #1a1a1a 100%); margin-bottom: 30px;">
   <defs>
-    <style type="text/css"><![CDATA[
-      @keyframes float {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-20px); }
-      }
-      @keyframes pulse {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.5; }
-      }
-      @keyframes rotate {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
-      @keyframes gradientShift {
-        0%, 100% { stop-color: #ff73c3; }
-        50% { stop-color: #ff1493; }
-      }
-      @keyframes starTwinkle {
-        0%, 100% { opacity: 0.8; }
-        50% { opacity: 0.2; }
-      }
-      .header-text { 
-        font-family: 'Montserrat', sans-serif; 
-        font-weight: bold;
-        animation: float 3s ease-in-out infinite;
-      }
-      .accent-text { 
-        fill: #ff73c3; 
-        animation: pulse 2s ease-in-out infinite;
-      }
-      .rotating { 
-        animation: rotate 20s linear infinite;
-        transform-origin: center;
-      }
-      .star {
-        animation: starTwinkle 3s infinite;
-      }
-    ]]></style>
     <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#ff73c3;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#ff1493;stop-opacity:1" />
@@ -50,30 +12,74 @@
   </defs>
   
   <!-- Rotating Circle Background Elements -->
-  <circle class="rotating" cx="100" cy="150" r="60" fill="none" stroke="#ff73c3" stroke-width="2" opacity="0.3"/>
-  <circle class="rotating" cx="1100" cy="150" r="60" fill="none" stroke="#ff73c3" stroke-width="2" opacity="0.3" style="animation-direction: reverse;"/>
+  <g transform-origin="100 150">
+    <circle cx="100" cy="150" r="60" fill="none" stroke="#ff73c3" stroke-width="2" opacity="0.3">
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate" values="0 100 150; 360 100 150" dur="20s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <g transform-origin="1100 150">
+    <circle cx="1100" cy="150" r="60" fill="none" stroke="#ff73c3" stroke-width="2" opacity="0.3">
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate" values="360 1100 150; 0 1100 150" dur="20s" repeatCount="indefinite"/>
+    </circle>
+  </g>
   
   <!-- Twinkling Stars -->
-  <circle class="star" cx="200" cy="50" r="3" fill="#ff73c3"/>
-  <circle class="star" cx="400" cy="100" r="2" fill="#ff1493"/>
-  <circle class="star" cx="800" cy="200" r="4" fill="#ff73c3"/>
-  <circle class="star" cx="1000" cy="80" r="3" fill="#ff1493"/>
+  <circle cx="200" cy="50" r="3" fill="#ff73c3">
+    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="400" cy="100" r="2" fill="#ff1493">
+    <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="800" cy="200" r="4" fill="#ff73c3">
+    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1000" cy="80" r="3" fill="#ff1493">
+    <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="350" cy="250" r="2.5" fill="#ff73c3">
+    <animate attributeName="opacity" values="0.5;0.1;0.5" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
   
-  <!-- Main Text -->
-  <text class="header-text" x="600" y="80" font-size="72" text-anchor="middle" fill="#fff" letter-spacing="3">
+  <!-- Main Text - Floating Effect -->
+  <text x="600" y="80" font-size="72" font-weight="bold" text-anchor="middle" fill="#fff" letter-spacing="3" font-family="Montserrat, sans-serif">
     SANDHYA
+    <animateTransform attributeName="transform" attributeType="XML" type="translate" values="0,-10; 0,10; 0,-10" dur="3s" repeatCount="indefinite"/>
   </text>
-  <text class="header-text" x="600" y="150" font-size="72" text-anchor="middle" fill="url(#heroGradient)" letter-spacing="3">
+  
+  <text x="600" y="150" font-size="72" font-weight="bold" text-anchor="middle" fill="url(#heroGradient)" letter-spacing="3" font-family="Montserrat, sans-serif">
     VARGANTI
+    <animateTransform attributeName="transform" attributeType="XML" type="translate" values="0,10; 0,-10; 0,10" dur="3s" repeatCount="indefinite"/>
   </text>
   
-  <!-- Subtitle -->
-  <text x="600" y="220" font-size="24" text-anchor="middle" fill="#ff73c3" font-family="'Open Sans', sans-serif" letter-spacing="1">
+  <!-- Subtitle with Pulsing Effect -->
+  <text x="600" y="240" font-size="26" text-anchor="middle" fill="#ff73c3" font-family="Open Sans, sans-serif" letter-spacing="1">
     ✦ Senior UI/UX & Full Stack Developer ✦
+    <animate attributeName="opacity" values="1;0.6;1" dur="2.5s" repeatCount="indefinite"/>
   </text>
   
-  <!-- Decorative Line -->
-  <line x1="350" y1="250" x2="1050" y2="250" stroke="#ff73c3" stroke-width="2" opacity="0.6"/>
+  <!-- Animated Decorative Line -->
+  <g>
+    <line x1="350" y1="270" x2="1050" y2="270" stroke="#ff73c3" stroke-width="2" opacity="0.8">
+      <animate attributeName="stroke-width" values="2;4;2" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="350" cy="270" r="4" fill="#ff73c3" opacity="0.6">
+      <animate attributeName="r" values="4;8;4" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1050" cy="270" r="4" fill="#ff73c3" opacity="0.6">
+      <animate attributeName="r" values="4;8;4" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Floating Particles -->
+  <circle cx="300" cy="100" r="1.5" fill="#ff1493" opacity="0.5">
+    <animate attributeName="cy" values="100;50;100" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;0.1;0.5" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="900" cy="150" r="1.5" fill="#ff73c3" opacity="0.5">
+    <animate attributeName="cy" values="150;200;150" dur="4.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;0.1;0.5" dur="4.5s" repeatCount="indefinite"/>
+  </circle>
 </svg>
 
 </div>
@@ -132,29 +138,42 @@ Senior UI/UX Developer & Full Stack Architect specializing in enterprise-scale a
 ### **Frontend Technologies**
 <div align="center">
 
-<svg width="100%" height="200" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <style>
-      .bar {
-        fill: #ff73c3;
-        animation: growBar 2s ease-in-out;
-      }
-      @keyframes growBar {
-        from { width: 0; }
-        to { width: 100%; }
-      }
-    </style>
-  </defs>
-  <rect x="10" y="10" width="95%" height="20" class="bar"/>
-  <text x="10" y="25" fill="#fff" font-size="14">React.js - 95%</text>
-  <rect x="10" y="40" width="95%" height="20" class="bar"/>
-  <text x="10" y="55" fill="#fff" font-size="14">Angular (2-16) - 95%</text>
-  <rect x="10" y="70" width="90%" height="20" class="bar"/>
-  <text x="10" y="85" fill="#fff" font-size="14">TypeScript - 90%</text>
-  <rect x="10" y="100" width="95%" height="20" class="bar"/>
-  <text x="10" y="115" fill="#fff" font-size="14">JavaScript (ES6+) - 95%</text>
-  <rect x="10" y="130" width="98%" height="20" class="bar"/>
-  <text x="10" y="145" fill="#fff" font-size="14">HTML5/CSS3/SCSS - 98%</text>
+<svg width="100%" height="220" xmlns="http://www.w3.org/2000/svg">
+  <!-- React.js Bar -->
+  <rect x="10" y="10" width="0%" height="20" fill="#ff73c3">
+    <animate attributeName="width" from="0%" to="95%" dur="2s" repeatCount="1" fill="freeze"/>
+  </rect>
+  <text x="10" y="25" fill="#fff" font-size="14" font-family="Arial">React.js - 95%</text>
+  
+  <!-- Angular Bar -->
+  <rect x="10" y="40" width="0%" height="20" fill="#ff1493">
+    <animate attributeName="width" from="0%" to="95%" dur="2.2s" repeatCount="1" fill="freeze"/>
+  </rect>
+  <text x="10" y="55" fill="#fff" font-size="14" font-family="Arial">Angular (2-16) - 95%</text>
+  
+  <!-- TypeScript Bar -->
+  <rect x="10" y="70" width="0%" height="20" fill="#ff73c3">
+    <animate attributeName="width" from="0%" to="90%" dur="2.4s" repeatCount="1" fill="freeze"/>
+  </rect>
+  <text x="10" y="85" fill="#fff" font-size="14" font-family="Arial">TypeScript - 90%</text>
+  
+  <!-- JavaScript Bar -->
+  <rect x="10" y="100" width="0%" height="20" fill="#ff1493">
+    <animate attributeName="width" from="0%" to="95%" dur="2.6s" repeatCount="1" fill="freeze"/>
+  </rect>
+  <text x="10" y="115" fill="#fff" font-size="14" font-family="Arial">JavaScript (ES6+) - 95%</text>
+  
+  <!-- HTML5/CSS3 Bar -->
+  <rect x="10" y="130" width="0%" height="20" fill="#ff73c3">
+    <animate attributeName="width" from="0%" to="98%" dur="2.8s" repeatCount="1" fill="freeze"/>
+  </rect>
+  <text x="10" y="145" fill="#fff" font-size="14" font-family="Arial">HTML5/CSS3/SCSS - 98%</text>
+  
+  <!-- React Native Bar -->
+  <rect x="10" y="160" width="0%" height="20" fill="#ff1493">
+    <animate attributeName="width" from="0%" to="85%" dur="3s" repeatCount="1" fill="freeze"/>
+  </rect>
+  <text x="10" y="175" fill="#fff" font-size="14" font-family="Arial">React Native - 85%</text>
 </svg>
 
 </div>
@@ -351,17 +370,11 @@ const myApproach = {
 
 <!-- Add a bouncing arrow animation -->
 <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-    .arrow {
-      fill: #ff73c3;
-      animation: bounce 1s infinite;
-    }
-  </style>
-  <polygon class="arrow" points="25,5 35,20 15,20"/>
+  <g>
+    <polygon points="25,5 35,20 15,20" fill="#ff73c3">
+      <animateTransform attributeName="transform" attributeType="XML" type="translate" values="0,0; 0,10; 0,0" dur="1s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
 </svg>
 
 </div>
