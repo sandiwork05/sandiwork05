@@ -365,7 +365,7 @@ const myApproach = {
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sandhya-varganti-015506224/)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/sandiwork05)
-[![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:Sandiwork04@gmail.com)
+[![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:sandhyavaragantiui@gmail.com)
 [![Phone](https://img.shields.io/badge/Phone-408--375--9753-ff73c3?style=flat-square&logo=whatsapp&logoColor=white)](tel:+14083759753)
 
 <!-- Add a bouncing arrow animation -->
